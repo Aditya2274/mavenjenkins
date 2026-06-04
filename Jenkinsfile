@@ -29,7 +29,7 @@ pipeline {
         always {
             junit 'target/surefire-reports/*.xml'
             
-            jacoco 'target/jacoco.exec'
+            jacoco()
         }
         success {
             archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
